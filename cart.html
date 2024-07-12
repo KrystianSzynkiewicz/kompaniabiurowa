@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/new-css-file.css" />
+  </head>
+  <body>
+    <form class="form-cart" action="">
+      <section>
+        <div class="title-cart firts-title">
+          Zawartość Twojego koszyka:
+          <button class="title-cart-button left-button">
+            <img class="grid-cart" src="images/cart/grip.png" alt="" />
+            Export
+          </button>
+          <button class="title-cart-button">
+            <img class="grid-cart" src="images/cart/grip.png" alt="" />
+            Export rozszerzony
+          </button>
+        </div>
+        <table class="table-cart">
+          <tbody>
+            <tr class="table-titles-cart">
+              <td>Usuń</td>
+              <td>Indeks</td>
+              <td>Ilość</td>
+              <td>Nazwa towaru</td>
+              <td>VAT</td>
+              <td>Cena netto</td>
+              <td>Wartość netto</td>
+              <td>Wartość brutto</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>14K066A</td>
+              <td>stepper</td>
+              <td>
+                <span>Segregato Donau Master A4/75mm</span>
+                <span>czarny</span>
+                <span
+                  >Kup promocyjne produkty DONAU za kwotę min. 549 zł netto a
+                  torbę plażową lub leżak plażowy otrzymasz w PREZENTCIE
+                </span>
+              </td>
+              <td>23%</td>
+              <td>9,99 zł</td>
+              <td>149,88 zł</td>
+              <td>184,35 zł</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>14K066A</td>
+              <td>stepper</td>
+              <td>
+                <span>Segregato Donau Master A4/75mm</span>
+                <span>czarny</span>
+                <span
+                  >Kup promocyjne produkty DONAU za kwotę min. 549 zł netto a
+                  torbę plażową lub leżak plażowy otrzymasz w PREZENTCIE
+                </span>
+              </td>
+              <td>23%</td>
+              <td>9,99 zł</td>
+              <td>149,88 zł</td>
+              <td>184,35 zł</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="calc">
+          Wartość netto:
+          <span>199,84 zł</span>
+          Podatek:
+          <span>45,96 zł</span>
+          <strong>Wartość brutto:</strong>
+          <span>245,80</span>
+        </div>
+        <div>
+          <button>Wyczyść koszyk</button>
+          <button>Przelicz koszyk</button>
+          <button>Kontynuuj zakupy</button>
+          <span>* szczeguły promocji dostępne <a href="">TUTAJ</a></span>
+        </div>
+      </section>
+      <section>
+        <div class="title-cart">
+          <span>Importuj produkty do koszyka z pliku CSV ?</span>
+          <button>Aktualny koszyk</button>
+        </div>
+        <div>Importowany plik:</div>
+        <input type="file" id="myFile" name="filename" />
+        <input type="submit" />
+        <div>Twój dostępnt</div>
+      </section>
+    </form>
+  </body>
+</html>
