@@ -11,16 +11,16 @@
     />
     <link rel="stylesheet" href="css/new-css-file.css" />
   </head>
-  <body>
+  <body class="cart-body">
     <form class="form-cart" action="">
       <section>
-        <div class="title-cart firts-title">
+        <div class="title-cart firts-title-cart">
           Zawartość Twojego koszyka:
-          <button class="title-cart-button left-button">
+          <button class="title-button-cart left-button-cart">
             <img class="grid-cart" src="images/cart/grip.png" alt="" />
             Export
           </button>
-          <button class="title-cart-button">
+          <button class="title-button-cart">
             <img class="grid-cart" src="images/cart/grip.png" alt="" />
             Export rozszerzony
           </button>
@@ -28,24 +28,26 @@
         <table class="table-cart">
           <tbody>
             <tr class="table-titles-cart">
-              <td>Usuń</td>
-              <td>Indeks</td>
-              <td>Ilość</td>
-              <td>Nazwa towaru</td>
-              <td>VAT</td>
-              <td>Cena netto</td>
-              <td>Wartość netto</td>
-              <td>Wartość brutto</td>
+              <th class="column1-cart">Usuń</th>
+              <th class="column2-cart">Indeks</th>
+              <th class="column3-cart">Ilość</th>
+              <th class="column4-cart">Nazwa towaru</th>
+              <th class="column5-cart">VAT</th>
+              <th class="column6-cart">Cena netto</th>
+              <th class="column7-cart">Wartość netto</th>
+              <th class="column8-cart">Wartość brutto</th>
             </tr>
             <tr>
               <td><input type="checkbox" /></td>
               <td>14K066A</td>
               <td>stepper</td>
-              <td>
-                <span>Segregato Donau Master A4/75mm</span>
-                <span>czarny</span>
-                <span
-                  >Kup promocyjne produkty DONAU za kwotę min. 549 zł netto a
+              <td class="product-cell-cart">
+                <span class="name-product-cart"
+                  >Segregato Donau Master A4/75mm</span
+                ><br />
+                <span class="color-product-cart">czarny</span><br />
+                <span class="small-info-product-cart">
+                  Kup promocyjne produkty DONAU za kwotę min. 549 zł netto a
                   torbę plażową lub leżak plażowy otrzymasz w PREZENTCIE
                 </span>
               </td>
@@ -58,11 +60,13 @@
               <td><input type="checkbox" /></td>
               <td>14K066A</td>
               <td>stepper</td>
-              <td>
-                <span>Segregato Donau Master A4/75mm</span>
-                <span>czarny</span>
-                <span
-                  >Kup promocyjne produkty DONAU za kwotę min. 549 zł netto a
+              <td class="product-cell-cart">
+                <span class="name-product-cart"
+                  >Segregato Donau Master A4/75mm</span
+                ><br />
+                <span class="color-product-cart">czarny</span><br />
+                <span class="small-info-product-cart">
+                  Kup promocyjne produkty DONAU za kwotę min. 549 zł netto a
                   torbę plażową lub leżak plażowy otrzymasz w PREZENTCIE
                 </span>
               </td>
@@ -70,33 +74,422 @@
               <td>9,99 zł</td>
               <td>149,88 zł</td>
               <td>184,35 zł</td>
+            </tr>
+            <tr>
+              <td colspan="8" class="calc-cart">
+                Wartość netto:
+                <span>199,84 zł</span>
+                Podatek:
+                <span>45,96 zł</span>
+                <strong>Wartość brutto:</strong>
+                <span class="general-cost-cart">245,80 zł</span>
+              </td>
             </tr>
           </tbody>
         </table>
-        <div class="calc">
-          Wartość netto:
-          <span>199,84 zł</span>
-          Podatek:
-          <span>45,96 zł</span>
-          <strong>Wartość brutto:</strong>
-          <span>245,80</span>
-        </div>
-        <div>
-          <button>Wyczyść koszyk</button>
-          <button>Przelicz koszyk</button>
-          <button>Kontynuuj zakupy</button>
-          <span>* szczeguły promocji dostępne <a href="">TUTAJ</a></span>
+        <div class="utils-under-cart">
+          <button class="utils-under-button-cart">Wyczyść koszyk</button>
+          <button class="utils-under-button-cart">Przelicz koszyk</button>
+          <button class="utils-under-button-cart">Kontynuuj zakupy</button>
+          <span class="utils-under-info-cart"
+            >* szczeguły promocji dostępne <a href="">TUTAJ</a></span
+          >
         </div>
       </section>
-      <section>
-        <div class="title-cart">
-          <span>Importuj produkty do koszyka z pliku CSV ?</span>
-          <button>Aktualny koszyk</button>
+      <section class="border-place">
+        <div class="title-cart second-title">
+          <span
+            >Importuj produkty do koszyka z pliku CSV
+            <i class="fa fa-question-circle" style="font-size: 24px"></i
+          ></span>
+          <button class="title-button-cart">Aktualny koszyk</button>
         </div>
-        <div>Importowany plik:</div>
-        <input type="file" id="myFile" name="filename" />
-        <input type="submit" />
-        <div>Twój dostępnt</div>
+        <div class="import-cart">
+          <p>Importowany plik:</p>
+          <input type="file" id="myFile" name="filename" value="" />
+          <input
+            class="utils-under-button-cart"
+            type="submit"
+            value="Importuj"
+          />
+        </div>
+        <div class="price-info-container-cart">
+          <span> Twój dostępny budżet miesięczny (brutto):</span>
+          <strong class="pink-price-cart"> 12000.00zł </strong><br />
+          <span> (po tym zamówieniu:</span>
+          <strong> 11754.20 zł </strong><span>)</span><br />
+          <span>
+            Twój indywidualny budżet brutto w ramach terminu kontraktu:</span
+          >
+          <strong class="pink-price-cart">13901.85 zł</strong><br />
+          <span> (po tym zamówieniu: </span>
+          <strong> 13656.05 zł </strong><span>)</span>
+        </div>
+      </section>
+      <section class="border-place">
+        <div class="title-cart second-title">
+          <span>Wybierz formę dostawy:</span>
+        </div>
+        <div class="delivery-cart">
+          <input type="radio" id="" name="" value="" />
+          <label for=""
+            ><strong
+              >Dostawa transportem Kompanii zgodnie z warunkami umowy</strong
+            >
+          </label>
+          <br />
+          <p>
+            Koszt wysyłki: <span>0,00 zł</span> Koszt zamówienia razem z
+            wysyłką: <span>245z80 zł</span> brutto
+          </p>
+          <input type="radio" id="" name="" value="" />
+          <label for=""><strong>Kurier - przy wpłacie na konto</strong> </label>
+          <br />
+          <p>
+            Koszt wysyłki: <span>18.90 zł</span> Koszt zamówienia razem z
+            wysyłką: <span>264,70 zł</span> brutto
+          </p>
+          <input type="radio" id="" name="" value="" />
+          <label for=""><strong>Kurier - za pobraniem</strong> </label>
+          <br />
+          <p>
+            Koszt wysyłki: <span>25,90 zł</span> Koszt zamówienia razem z
+            wysyłką: <span>271,70 zł</span> brutto
+          </p>
+        </div>
+      </section>
+      <section class="border-place">
+        <div class="title-cart second-title">
+          <span>Wybierz formę płatności:</span>
+        </div>
+        <div class="delivery-cart transfer-cart">
+          <input type="radio" id="" name="" value="" />
+          <label for=""> Wpłata na konto bankowe (przelew) </label>
+          <br />
+          <input type="radio" id="" name="" value="" />
+          <label for=""
+            >Płatność gotówką przy odbiorze własnym lub dostawie transportem
+            Kompanii
+          </label>
+          <br />
+        </div>
+      </section>
+      <section class="border-place">
+        <div class="title-cart second-title">
+          <span>Podsumowanie zamówienia:</span>
+        </div>
+        <div class="summary-row-cart-container">
+          <div class="summary-row-cart">
+            <div class="summary-row-cart-description">
+              Wartość netto towarów
+            </div>
+            <div class="summary-row-cart-price">199,84 zł</div>
+          </div>
+          <div class="summary-row-cart">
+            <div class="summary-row-cart-description">
+              Wartość brutto towarów
+            </div>
+            <div class="summary-row-cart-price">245,80 zł</div>
+          </div>
+          <div class="summary-row-cart">
+            <div class="summary-row-cart-description">
+              Koszt dostawy towarów
+            </div>
+            <div class="summary-row-cart-price">0,00 zł</div>
+          </div>
+          <div class="summary-row-cart">
+            <div class="summary-row-cart-description bold-pink">
+              Ogółem do zapłaty
+            </div>
+            <div class="summary-row-cart-price bold-pink">245,80zł</div>
+          </div>
+        </div>
+        <div class="other-info-cart">
+          <p>
+            Dodatkowe informacje dotyczące zamówienia: <br />
+            (np: inny rodzaj dostawy itp.)
+          </p>
+          <textarea name="" id="" cols="70" rows="10"></textarea>
+        </div>
+      </section>
+      <section class="border-place">
+        <div class="title-cart second-title">
+          <span>Wybierz formę płatności:</span>
+        </div>
+        <div class="doc-container-cart">
+          <input type="radio" id="" name="" value="" />
+          <label for="">FAKTURA </label>
+          <br />
+          <input type="radio" id="" name="" value="" />
+          <label for="">PARAGON </label>
+          <br />
+        </div>
+      </section>
+      <section class="border-place">
+        <div class="title-cart second-title">
+          <span>Wybierz konto, które złoży to zamówienie:</span>
+        </div>
+        <p class="account-info-cart">Wybierz Konto Zamawiające:</p>
+        <input
+          class="account-info-cart-input"
+          list="x"
+          name="x"
+          id="x"
+          value="- AKTUALNIE ZALOGOWANY -"
+        />
+        <datalist id="x">
+          <option value="- AKTUALNIE ZALOGOWANY -"></option>
+          <option value="- INNE KONTO -"></option>
+        </datalist>
+      </section>
+      <section class="border-place ordering-details-container1">
+        <div class="title-cart second-title">
+          <span>Dane zamawiającego:</span>
+        </div>
+        <div class="one-column-details first">
+          <label for="email"><span>*</span> Adres e-mail:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value="kasia@eurooffice.com.pl"
+            required
+          /><br />
+        </div>
+        <div class="one-column-details two-colums-details-cart">
+          <div class="left-column-details-cart">
+            <label for="fname"><span>*</span>Imię:</label><br />
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              value="test"
+              required
+            /><br />
+            <label for="companyName">Nazwa firmy:</label><br />
+            <input
+              type="text"
+              id="companyname"
+              name="companyname"
+              value="K.B."
+            /><br />
+            <label for="companyStreet"><span>*</span> Ulica:</label><br />
+            <input
+              type="text"
+              id="companyStreet"
+              name="companyStreet"
+              value="test"
+              required
+            /><br />
+            <label for="city"><span>*</span>Miasto:</label><br />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              value="test"
+              required
+            /><br />
+            <label for="province"><span>*</span>Województwo:</label><br />
+            <input
+              type="text"
+              id="province"
+              name="province"
+              value="test"
+              required
+            /><br />
+          </div>
+          <div class="right-column-details-cart">
+            <label for="lname"><span>*</span>Nazwisko</label><br />
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              value="główne"
+              required
+            /><br />
+            <label for="companyNIP">NIP firmy:</label><br />
+            <input
+              type="text"
+              id="companyNIP"
+              name="companyNIP"
+              value="12312312312312"
+            /><br />
+            <!-- --------- -->
+            <div class="home-details">
+              <div class="home-detail-container">
+                <label for="homeNumber"><span>*</span>Numer domu:</label><br />
+                <input
+                  type="text"
+                  id="homeNumber"
+                  name="homeNumber"
+                  value="33t"
+                  required
+                /><br />
+              </div>
+              <div class="home-detail-container">
+                <label for="homeNumber2"><span>*</span>Numer mieszkania:</label
+                ><br />
+                <input
+                  type="text"
+                  id="homeNumber2"
+                  name="homeNumber2"
+                  value=""
+                /><br />
+              </div>
+            </div>
+            <!-- --------- -->
+            <label for="city-code"><span>*</span>Kosz pocztowy:</label><br />
+            <input
+              type="text"
+              id="city-code"
+              name="city-code"
+              value="33-098"
+              required
+            /><br />
+            <label for="country"><span>*</span>Kraj:</label><br />
+            <input
+              type="text"
+              id="country"
+              name="country"
+              value="test"
+              required
+            /><br />
+          </div>
+        </div>
+        <div class="one-column-details last">
+          <label for="number"><span>*</span>Numer telefonu:</label><br />
+          <input
+            type="number"
+            id="number"
+            name="number"
+            value="123123123"
+            required
+          /><br />
+          <label for="division">Dział:</label><br />
+          <input type="text" id="division" name="division" value="" /><br />
+          <label for="differentAddress">Inny adres dostawy:</label><br />
+          <input
+            type="text"
+            id="differentAddress"
+            name="differentAddress"
+            value="inny adres"
+          /><br />
+        </div>
+      </section>
+      </section>
+      <section class="border-place ordering-details-container1 different-adres-container">
+        <div class="title-cart second-title">
+          <span>Inny adres dotawy:</span>
+        </div>
+        <p class="different-adres">Należy pozostawić pusty jeśli taki sam jak dane zamawiającego</p>
+
+        <div class="one-column-details two-colums-details-cart">
+          <div class="left-column-details-cart">
+            <label for="fname"><span>*</span>Imię:</label><br />
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              value="test"
+              required
+            /><br />
+          </div>
+          <div class="right-column-details-cart">
+            <label for="lname"><span>*</span>Nazwisko</label><br />
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              value="główne"
+              required
+            /><br />
+          </div>
+        </div>
+        <div class="one-column-details">
+          <label for="companyName">Nazwa firmy:</label><br />
+          <input
+            type="text"
+            id="companyname"
+            name="companyname"
+            value="K.B."
+          /><br />
+        </div>
+        <div class="one-column-details two-colums-details-cart">
+          <div class="left-column-details-cart">
+            <label for="companyStreet"><span>*</span> Ulica:</label><br />
+            <input
+              type="text"
+              id="companyStreet"
+              name="companyStreet"
+              value="test"
+              required
+            /><br />
+            <label for="city"><span>*</span>Miasto:</label><br />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              value="test"
+              required
+            /><br />
+            <label for="province"><span>*</span>Województwo:</label><br />
+            <input
+              type="text"
+              id="province"
+              name="province"
+              value="test"
+              required
+            /><br />
+          </div>
+          <div class="right-column-details-cart">
+            <!-- --------- -->
+            <div class="home-details">
+              <div class="home-detail-container">
+                <label for="homeNumber"><span>*</span>Numer domu:</label><br />
+                <input
+                  type="text"
+                  id="homeNumber"
+                  name="homeNumber"
+                  value="33t"
+                  required
+                /><br />
+              </div>
+              <div class="home-detail-container">
+                <label for="homeNumber2"><span>*</span>Numer mieszkania:</label
+                ><br />
+                <input
+                  type="text"
+                  id="homeNumber2"
+                  name="homeNumber2"
+                  value=""
+                /><br />
+              </div>
+            </div>
+            <!-- --------- -->
+            <label for="city-code"><span>*</span>Kod pocztowy:</label><br />
+            <input
+              type="text"
+              id="city-code"
+              name="city-code"
+              value="33-098"
+              required
+            /><br />
+            <label for="country"><span>*</span>Kraj:</label><br />
+            <input
+              type="text"
+              id="country"
+              name="country"
+              value="test"
+              required
+            /><br />
+          </div>
+        </div>
+      </section>
+      <section class="border-place last-section">
+        <button class="utils-under-button-cart"><< Powrót</button>
+        <button class="title-button-cart left-button-cart last-button">
+          Podsumowanie zamówienia
+        </button>
       </section>
     </form>
   </body>
